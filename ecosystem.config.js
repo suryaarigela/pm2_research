@@ -19,12 +19,15 @@ module.exports = {
   }],
 
   deploy : {
-    user : 'node',
-    host : '10.31.252.51',
-    path : '/var/www/development',
-    ref  : 'origin/master',
-    repo : 'https://github.com/suryaarigela/pm2_research.git',
-    'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env development'
+    development:{
+      user : 'node',
+      host : '10.31.252.51',
+      path : '/var/www/development',
+      ref  : 'origin/master',
+      repo : 'https://github.com/suryaarigela/pm2_research.git',
+      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env development'
+    }
+   
 
   }
 };
